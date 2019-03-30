@@ -109,12 +109,12 @@ public class TaxisDisplay extends AppCompatActivity {
                  .observeOn(AndroidSchedulers.mainThread())
                  .subscribe(new Consumer<Timed<Long>>() {
                      @Override
-                     public void accept(@NonNull Timed<Long> longTimed) throws Exception {
+                     public void accept(@NonNull Timed<Long> longTimed) {
                          // after 5 second interval
                           List<TaxisModel> list = UtilsGenerator.createMockTaxisItems();
                           Collections.sort(list,sortEta);
                           notifyToAdapter(Collections.unmodifiableList(list));
-                         Log.d(TAG, "accept: longTimed? "+longTimed);
+                          Log.d(TAG, "accept: longTimed? "+longTimed);
                      }
                  });
      }
