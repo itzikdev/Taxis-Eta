@@ -82,7 +82,7 @@ public class TaxisAdapter extends RecyclerView.Adapter<TaxisAdapter.ViewHolder> 
     }
 
 
-    public static class ViewHolder extends RecyclerView.ViewHolder{
+     class ViewHolder extends RecyclerView.ViewHolder{
 
         RelativeLayout container;
         private ImageView iconView;
